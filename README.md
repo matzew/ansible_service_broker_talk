@@ -4,6 +4,7 @@
 
 Execute the script:
 ```
+./ocp_asb_setup.sh 
 
 ```
 
