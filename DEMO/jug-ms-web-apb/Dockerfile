@@ -1,0 +1,14 @@
+FROM ansibleplaybookbundle/apb-base
+
+LABEL "com.redhat.apb.spec"=\
+"dmVyc2lvbjogMS4wCm5hbWU6IGp1Zy1tcy13ZWItYXBiCmRlc2NyaXB0aW9uOiBKVUcgTVMgREVN\
+TyBBUFAKYmluZGFibGU6IEZhbHNlCmFzeW5jOiBvcHRpb25hbAptZXRhZGF0YToKICBkaXNwbGF5\
+TmFtZToganVnLW1zLXdlYgogIGRpc3BsYXlQcm92aWRlck5hbWU6IEpVRyBNUyBJTkMKcGxhbnM6\
+CiAgLSBuYW1lOiBkZWZhdWx0CiAgICBkZXNjcmlwdGlvbjogVGhpcyBkZWZhdWx0IHBsYW4gZGVw\
+bG95cyBqdWctbXMtd2ViLWFwYgogICAgZnJlZTogVHJ1ZQogICAgbWV0YWRhdGE6IHt9CiAgICBw\
+YXJhbWV0ZXJzOiBbXQ=="
+
+COPY playbooks /opt/apb/actions
+COPY roles /opt/ansible/roles
+RUN chmod -R g=u /opt/{ansible,apb}
+USER apb

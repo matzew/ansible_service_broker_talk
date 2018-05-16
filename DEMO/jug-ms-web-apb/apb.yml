@@ -1,0 +1,14 @@
+version: 1.0
+name: jug-ms-web-apb
+description: JUG MS DEMO APP
+bindable: False
+async: optional
+metadata:
+  displayName: jug-ms-web
+  displayProviderName: JUG MS INC
+plans:
+  - name: default
+    description: This default plan deploys jug-ms-web-apb
+    free: True
+    metadata: {}
+    parameters: []
